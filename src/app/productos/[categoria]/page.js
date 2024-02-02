@@ -1,6 +1,6 @@
 import React from 'react'
 import products from "@/files/products.js"
-import ItemList from "@/Components/ItemList.js"
+import ItemListConteiner from '@/Components/ItemListConteiner';
 
 const Productos = ({params}) => {
 
@@ -20,7 +20,7 @@ const Productos = ({params}) => {
   return (
     <>
     <div>Productos de categoría: {category}</div>
-    <ItemList producto={result}></ItemList>
+    <ItemListConteiner producto={result}></ItemListConteiner>
     </>
   )
 }
