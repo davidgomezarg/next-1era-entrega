@@ -1,26 +1,14 @@
-import React from 'react'
-import products from "@/files/products.js"
-import ItemListConteiner from '@/Components/ItemListConteiner';
+import ItemListConteiner from '@/Components/productos/ItemListConteiner';
+import CategorySelector from '@/Components/productos/CategorySelector';
 
 const Productos = ({params}) => {
 
   const category = params.categoria;
-  console.log(category)
-  let result =[];
-
-  if(category === "all")
-  {result= products}
-  else
-  {
-    result = products.filter((product) => product.categoria === params.categoria);
-    console.log(result);
-}
-
-
+  
   return (
     <>
-    <div>Productos de categoría: {category}</div>
-    <ItemListConteiner producto={result}></ItemListConteiner>
+    <CategorySelector/>
+    <ItemListConteiner category={category}></ItemListConteiner>
     </>
   )
 }
