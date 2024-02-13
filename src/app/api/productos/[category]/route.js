@@ -13,7 +13,16 @@ export const GET = async (request,{params}) => {
                 : query(productosRef, where('category', '==', category))
     const querySnapshot = await getDocs(q)
 
-    const docs =  querySnapshot.docs.map(doc => doc.data())
+    const items= []
+    querySnapshot.docs.forEach(
+        (doc)=>{
+            //console.log(`${doc.id} => ${doc.data()}`)
+            const item = {...doc.data(),id: doc.id}
+            items.push(item)
+            console.log(item)
+        }
+    )
+    // const docs =  querySnapshot.docs.map(doc => doc.data())
 
-    return NextResponse.json(docs)
+    return NextResponse.json(items)
 }

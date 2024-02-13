@@ -7,7 +7,7 @@ async function ItemListConteiner({category}) {
     cache: 'no-store'})
   .then(res => res.json())
   .then((r)=>{
-    console.log(r);
+    //console.log(r);
     return r
   })
 

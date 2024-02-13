@@ -12,12 +12,12 @@ const ProductDetail = async ({ slug }) => {
             {/* <GoBack className="text-sm text-blue-500 underline mb-6" /> */}
             <section className="flex gap-6">
                 <div className="relative basis-1/2">
-                    {/* <Image
-                        src={`/imgs/products/${item.image}`}
-                        alt={item.title}
+                    <Image
+                        src={`/img/${item.image}`}
+                        alt={item.name}
                         width={860}
                         height={860}
-                    /> */}
+                    />
                 </div>
                 <div className="basis-1/2">
                     <h2 className="text-2xl font-semibold border-b border-gray-200 pb-4 mb-4">{item.title}</h2>
