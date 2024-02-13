@@ -29,7 +29,7 @@ const links = [
 const Navbar = () => {
   return (
     <nav className='w-full h-16 shadow-xl bg-white'>
-      <div className='flex justify-between items-center h-full w-full px-10 2x1:px-16'>
+      <div className='flex justify-around items-center h-full w-full px-10 2x1:px-16'>
         <Link href={"/"}>
         <div className="flex">
         <Image

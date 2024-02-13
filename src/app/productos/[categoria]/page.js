@@ -7,8 +7,13 @@ const Productos = ({params}) => {
   
   return (
     <>
-    <CategorySelector/>
-    <ItemListConteiner category={category}></ItemListConteiner>
+    <section className='flex justify-center'>
+      <CategorySelector/>
+    </section>
+    
+    <section className='flex flex-wrap justify-center'>
+      <ItemListConteiner category={category}></ItemListConteiner>
+    </section>
     </>
   )
 }

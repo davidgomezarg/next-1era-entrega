@@ -10,14 +10,15 @@ function CategorySelector() {
         setIsOpen(!isOpen)
     }
   return (
-    <div className='relative flex flex-col items-center w-[340px] h-[340px] rounded-lg'>
-        <button type="button" onClick={change} className='p-4 w-full flex items-center justify-between
+    <div className='flex flex-col items-center w-[340px] rounded-lg '>
+        <button type="button" onClick={change} className='bg-gray-200 shadow-lg p-2 m-4 w-full flex items-center justify-between
         font-bold text-lg rounded-lg tracking-wider border-4 border-transparent'>
             Categoria
-            {!isOpen ? <ChevronDownIcon className= "h-8"/>:<ChevronUpIcon className='h-8'/>}
+            {!isOpen ? <ChevronDownIcon className= "h-4"/>:<ChevronUpIcon className='h-4'/>}
         </button>
 
-        {isOpen && (<div className='font-bold absolute top-20 flex flex-col items-start rounded-lg p-2 w-full'>
+        {isOpen && (
+        <div className='bg-gray-200 font-bold top-40 flex flex-col items-start rounded-lg p-2 w-[340px] absolute'>
             <div className='flex flex-col w-full justify-between'>
                 <a href="/productos/all">Todos</a>
                 <a href="/productos/frescos">Frescos</a>
